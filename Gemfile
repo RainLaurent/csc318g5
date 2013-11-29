@@ -5,6 +5,7 @@ gem 'rails', '4.0.1'
 
 # Use mysql as the database for Active Record
 gem 'mysql2'
+gem 'pg'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -49,3 +50,4 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+ruby "2.0.0"
