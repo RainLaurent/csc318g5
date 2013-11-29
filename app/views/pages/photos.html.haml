@@ -1,0 +1,93 @@
+- 3.times do
+  .row
+    - 3.times do
+      .col-xs-4
+        = image_tag '1.jpg', class: 'img-thumbnail img-selectable'
+
+// Bottom toolbar
+.row.toolbar-row
+  .col-xs-8.col-xs-offset-2
+    .btn-group.toolbar-buttons
+      %button.btn.btn-default{"data-target" => "#view", "data-toggle" => "modal"}
+        %span.glyphicon.glyphicon-resize-full
+        View
+      %a.btn.btn-default{href: "./edit_page.html"}
+        %span.glyphicon.glyphicon-pencil
+        Edit
+      %button.btn.btn-default{type: "button"}
+        %span.glyphicon.glyphicon-remove
+        Delete
+      %button.btn.btn-default{"data-target" => "#share", "data-toggle" => "modal", type: "button"}
+        %span.glyphicon.glyphicon-share
+        Share
+      %button.btn.btn-default{"data-target" => "#tag", "data-toggle" => "modal", type: "button"}
+        %span.glyphicon.glyphicon-tag
+        Tag
+      %button.btn.btn-default{type: "button"}
+        %span.glyphicon.glyphicon-print
+        Print
+
+// Share Modal
+#share.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "shareLabel", role: "dialog", tabindex: "-1"}
+  .modal-dialog
+    .modal-content
+      .modal-header
+        %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", type: "button"} ×
+        %h4#shareLabel.modal-title Share Photos
+      .modal-body
+        %h6 Share These Photos
+        .row
+          .col-xs-4
+            = image_tag '1.jpg', class: 'img-thumbnail'
+          .col-xs-4
+            = image_tag '1.jpg', class: 'img-thumbnail'
+          .col-xs-4
+            = image_tag '1.jpg', class: 'img-thumbnail'
+        %h6 Through ...
+        .row
+          .col-xs-2
+            = image_tag 'facebook.png', class: 'social-icon img-selectable'
+            %p.text-center Facebook
+          .col-xs-2
+            = image_tag 'twitter.png', class: 'social-icon img-selectable'
+            .row
+              %p.text-center Twitter
+          .col-xs-2
+            = image_tag 'google_plus.png', class: 'social-icon img-selectable'
+            %p.text-center Google+
+          .col-xs-2
+            = image_tag 'email.png', class: 'social-icon img-selectable'
+            %p.text-center Email
+          .col-xs-2
+            %a{href: "#"}
+              = image_tag 'more.png', class: 'social-icon img-selectable'
+            %p.text-center More
+      .modal-footer
+        %button.btn.btn-default{"data-dismiss" => "modal", type: "button"} Close
+        %button.btn.btn-primary{type: "button"} Share
+
+
+// Tag Modal
+#tag.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "shareLabel", role: "dialog", tabindex: "-1"}
+  .modal-dialog
+    .modal-content
+      .modal-header
+        %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", type: "button"} ×
+        %h4#shareLabel.modal-title Tag Photos
+      .modal-body
+        %h6 Tag These Photos
+        .row
+          .col-xs-4
+            = image_tag '1.jpg', class: 'img-thumbnail'
+          .col-xs-4
+            = image_tag '1.jpg', class: 'img-thumbnail'
+          .col-xs-4
+            = image_tag '1.jpg', class: 'img-thumbnail'
+        %h6 With ...
+        .row
+          .col-xs-12
+            %form{"role" => "form"}
+              %input{"input" => "text", "class" => "form-control", "placeholder" => "Tags seperated by comma"}
+      .modal-footer
+        %button.btn.btn-default{"data-dismiss" => "modal", type: "button"} Close
+        %button.btn.btn-primary{type: "button"} Share
