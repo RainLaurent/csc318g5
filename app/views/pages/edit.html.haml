@@ -1,0 +1,56 @@
+.col-xs-10
+  = image_tag '1.jpg', class: 'img-thumbnail img-selectable'
+
+  %form{"role" => "form"}
+    .form-group
+      %label Title/Name
+      %input.form-control{"type" => "text"}
+
+    .form-group
+      %label Tags
+      %input.form-control{"type" => "text", "placeholder" => "Comma to seperate"}
+    .form-group
+      %label Description
+      %textarea.form-control{"rows" => 3}
+
+    .form-group
+      %button.btn.btn-primary{"type" => "submit"} Save
+      %button.btn.btn-primary{"type" => "submit"} Save As New Photo
+.col-xs-2
+  .row
+    .btn-group-vertical
+      .btn-group
+        %button.btn.btn-default.dropdown-toggle{"type" => "button", "data-toggle" => "dropdown"}
+          = fa_icon 'refresh'
+          Rotate
+          %span.caret
+
+        %ul.dropdown-menu
+          %li
+            %a{"href" => "#"} Left
+          %li
+            %a{"href" => "#"} Right
+
+
+      %button.btn.btn-default{"type" => "button"}
+        = fa_icon 'crop'
+        Crop
+      %button.btn.btn-default{"type" => "button"}
+        = fa_icon 'exchange'
+        Resize
+      %button.btn.btn-default{"type" => "button"}
+        = fa_icon 'eye'
+        Redeye
+
+  .row.step
+    .btn-group-vertical
+
+      %button.btn.btn-default{"type" => "button"}
+        = fa_icon 'undo'
+        Undo
+      %button.btn.btn-default{"type" => "button"}
+        = fa_icon 'repeat'
+        Redo
+      %button.btn.btn-default{"type" => "button"}
+        = fa_icon 'mail-reply-all'
+        Reset

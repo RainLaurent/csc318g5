@@ -6,4 +6,8 @@ class PagesController < ApplicationController
   def moments
     
   end
+
+  def edit
+    
+  end
 end

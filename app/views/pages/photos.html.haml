@@ -11,7 +11,7 @@
       %button.btn.btn-default{"data-target" => "#view", "data-toggle" => "modal"}
         %span.glyphicon.glyphicon-resize-full
         View
-      %a.btn.btn-default{href: "./edit_page.html"}
+      %a.btn.btn-default{href: "edit"}
         %span.glyphicon.glyphicon-pencil
         Edit
       %button.btn.btn-default{type: "button"}
@@ -26,6 +26,9 @@
       %button.btn.btn-default{type: "button"}
         %span.glyphicon.glyphicon-print
         Print
+      %button.btn.btn-default{"data-target" => "#moment", "data-toggle" => "modal", type: "button"}
+        %span.glyphicon.glyphicon-new-window
+        Mark As Moment
 
 // Share Modal
 #share.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "shareLabel", role: "dialog", tabindex: "-1"}
@@ -64,7 +67,7 @@
             %p.text-center More
       .modal-footer
         %button.btn.btn-default{"data-dismiss" => "modal", type: "button"} Close
-        %button.btn.btn-primary{type: "button"} Share
+        %button.btn.btn-primary{"data-dismiss" => "modal", type: "button"} Share
 
 
 // Tag Modal
@@ -90,4 +93,36 @@
               %input{"input" => "text", "class" => "form-control", "placeholder" => "Tags seperated by comma"}
       .modal-footer
         %button.btn.btn-default{"data-dismiss" => "modal", type: "button"} Close
-        %button.btn.btn-primary{type: "button"} Share
+        %button.btn.btn-primary{"data-dismiss" => "modal", type: "button"} Save
+
+// Tag Modal
+#moment.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "shareLabel", role: "dialog", tabindex: "-1"}
+  .modal-dialog
+    .modal-content
+      .modal-header
+        %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", type: "button"} ×
+        %h4#shareLabel.modal-title Mark As Moment
+      .modal-body
+        %h6 Mark These Photos
+        .row
+          .col-xs-4
+            = image_tag '1.jpg', class: 'img-thumbnail'
+          .col-xs-4
+            = image_tag '1.jpg', class: 'img-thumbnail'
+          .col-xs-4
+            = image_tag '1.jpg', class: 'img-thumbnail'
+        %h6 As ...
+        .row
+          .col-xs-4
+            = image_tag 'moments/goal.png', class: 'img-sig-selectable moment-cover'
+            %p.text-center xxx
+          .col-xs-4
+            = image_tag 'moments/goal.png', class: 'img-sig-selectable moment-cover'
+            %p.text-center xxx
+          .col-xs-4
+            = image_tag 'moments/goal.png', class: 'img-sig-selectable moment-cover'
+            %p.text-center xxx
+          
+      .modal-footer
+        %button.btn.btn-default{"data-dismiss" => "modal", type: "button"} Close
+        %button.btn.btn-primary{"data-dismiss" => "modal", type: "button"} Save

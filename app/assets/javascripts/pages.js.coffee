@@ -17,5 +17,9 @@ init = ->
     else
       $(".toolbar-row").hide()
 
+  $(".img-sig-selectable").on "click", (e) ->
+    $(".img-selected").removeClass "img-selected"
+    $(this).toggleClass "img-selected"
+
 $(document).ready(init)
 $(document).on('page:load', init)
