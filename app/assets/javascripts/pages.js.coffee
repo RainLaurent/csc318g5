@@ -21,5 +21,6 @@ init = ->
     $(".img-selected").removeClass "img-selected"
     $(this).toggleClass "img-selected"
 
+  $(".group1").colorbox({rel: "group1"})
 $(document).ready(init)
 $(document).on('page:load', init)

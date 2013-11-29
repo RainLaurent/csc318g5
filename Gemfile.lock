@@ -40,6 +40,9 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.6.3)
+    colorbox-rails (0.1.0)
+      jquery-rails
+      rails (>= 3.1.1)
     columnize (0.3.6)
     debugger-linecache (1.2.0)
     erubis (2.7.0)
@@ -126,6 +129,7 @@ DEPENDENCIES
   bootstrap-sass (~> 3.0.2.0)
   byebug
   coffee-rails (~> 4.0.0)
+  colorbox-rails
   font-awesome-rails (~> 4.0.1.0)
   haml-rails
   jbuilder (~> 1.2)

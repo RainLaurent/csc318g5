@@ -10,4 +10,8 @@ class PagesController < ApplicationController
   def edit
     
   end
+
+  def search
+    
+  end
 end
