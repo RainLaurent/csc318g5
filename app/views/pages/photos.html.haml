@@ -8,10 +8,10 @@
 .row.toolbar-row
   .col-xs-8.col-xs-offset-2
     .btn-group.toolbar-buttons
-      %a.btn.btn-default.group1{"href" => "assets/1.jpg"}
+      = link_to asset_path("1.jpg"), class: 'btn btn-default group1' do
         %span.glyphicon.glyphicon-resize-full
         View
-      %a.btn.btn-default.group1.invisible{"href" => "assets/moments/goal.png"}
+      = link_to asset_path("moments/goal.png"), class: 'btn btn-default group1 invisible' do
         %span.glyphicon.glyphicon-resize-full
         View
       %a.btn.btn-default{href: "edit"}
