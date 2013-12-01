@@ -19,26 +19,27 @@
           %input.form-control{placeholder: "Search All Photos", type: "text"}/
 
       %a.btn.btn-default{href: "search"} Go
-    %ul.nav.navbar-nav.navbar-right
-      %li.dropdown
-        %a.dropdown-toggle{"data-toggle" => "dropdown", href: "#"}
-          View Mode
-          %b.caret
-        %ul.dropdown-menu
-          %li
-            %a{href: "#"} Thumbnail
-          %li
-            %a{href: "#"} Timeline
-          %li
-            %a{href: "#"} Slide Show
-      %li.dropdown
-        %a.dropdown-toggle{"data-toggle" => "dropdown", href: "#"}
-          Sort
-          %b.caret
-        %ul.dropdown-menu
-          %li
-            %a{href: "#"} Time
-          %li
-            %a{href: "#"} Location
-          %li
-            %a{href: "#"} People
+    - if !request.original_url.include?('edit')
+      %ul.nav.navbar-nav.navbar-right
+        %li.dropdown
+          %a.dropdown-toggle{"data-toggle" => "dropdown", href: "#"}
+            View Mode
+            %b.caret
+          %ul.dropdown-menu
+            %li
+              %a{href: "#"} Thumbnail
+            %li
+              %a{href: "#"} Timeline
+            %li
+              %a{href: "#"} Slide Show
+        %li.dropdown
+          %a.dropdown-toggle{"data-toggle" => "dropdown", href: "#"}
+            Sort
+            %b.caret
+          %ul.dropdown-menu
+            %li
+              %a{href: "#"} Time
+            %li
+              %a{href: "#"} Location
+            %li
+              %a{href: "#"} People
