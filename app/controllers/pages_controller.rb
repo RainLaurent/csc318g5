@@ -14,4 +14,12 @@ class PagesController < ApplicationController
   def search
     
   end
+
+  def tags
+
+  end
+
+  def click_tag
+    
+  end
 end

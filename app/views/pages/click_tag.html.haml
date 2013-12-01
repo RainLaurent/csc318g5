@@ -1,12 +1,9 @@
 .row
   .col-xs-12
     Search Results For:
-    = link_to click_tag_path, class: 'tag-link' do
+    %a.tag-link{'href' => '#'}
       %span.label.label-primary.search-term Eric
     
-    = link_to click_tag_path, class: 'tag-link' do
-      %span.label.label-primary.search-term Soccer
-
 %hr.search-divider
 
 - 1.times do

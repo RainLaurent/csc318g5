@@ -68,7 +68,16 @@ img {
   font-size: 100%;
 }
 
-.search-divider {
+hr {
   margin-top: 10px;
   margin-bottom: 10px;
+}
+
+.tag-link:hover {
+  text-decoration: none;
+}
+
+h1, h2 {
+  margin-top: 0px;
+  margin-bottom: 0px;
 }

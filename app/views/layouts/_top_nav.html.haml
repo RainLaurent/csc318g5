@@ -7,7 +7,7 @@
       %span.icon-bar
       %span.icon-bar
       %span.icon-bar
-    %a.navbar-brand{href: "#"} H-Moments
+    = link_to 'H-Moments', root_path, class: 'navbar-brand'
   
   #bs-example-navbar-collapse-1.collapse.navbar-collapse
     / Search
@@ -19,26 +19,27 @@
           %input.form-control{placeholder: "Search All Photos", type: "text"}/
 
       %a.btn.btn-default{href: "search"} Go
-    %ul.nav.navbar-nav.navbar-right
-      %li.dropdown
-        %a.dropdown-toggle{"data-toggle" => "dropdown", href: "#"}
-          View Mode
-          %b.caret
-        %ul.dropdown-menu
-          %li
-            %a{href: "#"} Thumbnail
-          %li
-            %a{href: "#"} Timeline
-          %li
-            %a{href: "#"} Slide Show
-      %li.dropdown
-        %a.dropdown-toggle{"data-toggle" => "dropdown", href: "#"}
-          Sort
-          %b.caret
-        %ul.dropdown-menu
-          %li
-            %a{href: "#"} Time
-          %li
-            %a{href: "#"} Location
-          %li
-            %a{href: "#"} People
+    - if request.original_url == root_url
+      %ul.nav.navbar-nav.navbar-right
+        %li.dropdown
+          %a.dropdown-toggle{"data-toggle" => "dropdown", href: "#"}
+            View Mode
+            %b.caret
+          %ul.dropdown-menu
+            %li
+              %a{href: "#"} Thumbnail
+            %li
+              %a{href: "#"} Timeline
+            %li
+              %a{href: "#"} Slide Show
+        %li.dropdown
+          %a.dropdown-toggle{"data-toggle" => "dropdown", href: "#"}
+            Sort
+            %b.caret
+          %ul.dropdown-menu
+            %li
+              %a{href: "#"} Time
+            %li
+              %a{href: "#"} Location
+            %li
+              %a{href: "#"} People
