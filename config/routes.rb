@@ -6,6 +6,7 @@ Csc318g5::Application.routes.draw do
   get 'search' => 'pages#search', as: :search
   get 'tags' => 'pages#tags', as: :tags
   get 'click_tag' => 'pages#click_tag', as: :click_tag
+  get 'moment_open' => 'pages#moment_open', as: :moment_open
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

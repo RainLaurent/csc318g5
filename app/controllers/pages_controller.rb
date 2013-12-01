@@ -22,4 +22,8 @@ class PagesController < ApplicationController
   def click_tag
     
   end
+
+  def moment_open
+    
+  end
 end

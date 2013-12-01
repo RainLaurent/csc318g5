@@ -9,10 +9,10 @@
 
 %hr.search-divider
 
-- 1.times do
+- ['photos/soccer1.jpg', 'photos/soccer2.jpg', 'photos/soccer3.jpg', 'photos/soccer4.jpg'].each_slice(3) do |imgs|
   .row
-    - 3.times do
+    - imgs.each do |img|
       .col-xs-4
-        = image_tag '1.jpg', class: 'img-thumbnail img-selectable'
+        = image_tag img, class: 'img-thumbnail img-selectable'
 
 = render 'toolbar'

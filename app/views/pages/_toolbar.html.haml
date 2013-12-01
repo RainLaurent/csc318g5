@@ -2,10 +2,10 @@
 .row.toolbar-row
   .col-xs-8.col-xs-offset-2
     .btn-group.toolbar-buttons
-      = link_to asset_path("1.jpg"), class: 'btn btn-default group1' do
+      = link_to asset_path("photos/soccer1.jpg"), class: 'btn btn-default group1' do
         %span.glyphicon.glyphicon-resize-full
         View
-      = link_to asset_path("moments/goal.png"), class: 'btn btn-default group1 invisible' do
+      = link_to asset_path("photos/soccer2.jpg"), class: 'btn btn-default group1 invisible' do
         %span.glyphicon.glyphicon-resize-full
         View
       %a.btn.btn-default{href: "edit"}
@@ -38,11 +38,11 @@
         %h6 Share These Photos
         .row
           .col-xs-4
-            = image_tag '1.jpg', class: 'img-thumbnail'
+            = image_tag 'photos/soccer1.jpg', class: 'img-thumbnail'
           .col-xs-4
-            = image_tag '1.jpg', class: 'img-thumbnail'
+            = image_tag 'photos/soccer2.jpg', class: 'img-thumbnail'
           .col-xs-4
-            = image_tag '1.jpg', class: 'img-thumbnail'
+            = image_tag 'photos/soccer3.jpg', class: 'img-thumbnail'
         %h6 Through ...
         .row
           .col-xs-2
@@ -78,11 +78,11 @@
         %h6 Tag These Photos
         .row
           .col-xs-4
-            = image_tag '1.jpg', class: 'img-thumbnail'
+            = image_tag 'photos/soccer1.jpg', class: 'img-thumbnail'
           .col-xs-4
-            = image_tag '1.jpg', class: 'img-thumbnail'
+            = image_tag 'photos/soccer2.jpg', class: 'img-thumbnail'
           .col-xs-4
-            = image_tag '1.jpg', class: 'img-thumbnail'
+            = image_tag 'photos/soccer3.jpg', class: 'img-thumbnail'
         %h6 With ...
         .row
           .col-xs-12
@@ -103,21 +103,21 @@
         %h6 Mark These Photos
         .row
           .col-xs-4
-            = image_tag '1.jpg', class: 'img-thumbnail'
+            = image_tag 'photos/soccer1.jpg', class: 'img-thumbnail'
           .col-xs-4
-            = image_tag '1.jpg', class: 'img-thumbnail'
+            = image_tag 'photos/soccer2.jpg', class: 'img-thumbnail'
           .col-xs-4
-            = image_tag '1.jpg', class: 'img-thumbnail'
+            = image_tag 'photos/soccer3.jpg', class: 'img-thumbnail'
         %h6 As ...
         .row
           .col-xs-4
-            = image_tag 'moments/goal.png', class: 'img-sig-selectable moment-cover'
+            = image_tag 'moments/soccer_moment.jpg', class: 'img-sig-selectable moment-cover'
+            %p.text-center Eric First Soccer Goal
+          .col-xs-4
+            = image_tag 'moments/pool_moment.jpg', class: 'img-sig-selectable moment-cover'
             %p.text-center xxx
           .col-xs-4
-            = image_tag 'moments/goal.png', class: 'img-sig-selectable moment-cover'
-            %p.text-center xxx
-          .col-xs-4
-            = image_tag 'moments/goal.png', class: 'img-sig-selectable moment-cover'
+            = image_tag 'moments/hokey_moment.JPG', class: 'img-sig-selectable moment-cover'
             %p.text-center xxx
           
       .modal-footer
@@ -135,11 +135,11 @@
         %h6 Delete These Photos
         .row
           .col-xs-4
-            = image_tag '1.jpg', class: 'img-thumbnail'
+            = image_tag 'photos/soccer1.jpg', class: 'img-thumbnail'
           .col-xs-4
-            = image_tag '1.jpg', class: 'img-thumbnail'
+            = image_tag 'photos/soccer2.jpg', class: 'img-thumbnail'
           .col-xs-4
-            = image_tag '1.jpg', class: 'img-thumbnail'
+            = image_tag 'photos/soccer3.jpg', class: 'img-thumbnail'
         %h3 Are you sure?
         %p This action cannot be undone
           

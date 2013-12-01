@@ -5,7 +5,9 @@
     New
 %hr
 
-- [['moments/pool.JPG', 'Melody First Time Swimming'], ['moments/hockey.JPG', 'At Home Hockey']].each_slice(3) do |imgs|
+- [['moments/soccer_moment.jpg', 'Eric First Soccer Goal'],
+   ['moments/pool_moment.jpg', 'Melody First Time Swimming'], 
+   ['moments/hokey_moment.JPG', 'In Home Hockey']].each_slice(3) do |imgs|
   .row
     - imgs.each do |img|
       .col-xs-4
@@ -20,7 +22,7 @@
 .row.toolbar-row
   .col-xs-8.col-xs-offset-2
     .btn-group.toolbar-buttons
-      = link_to root_path, class: 'btn btn-default' do
+      = link_to moment_open_path, class: 'btn btn-default' do
         %span.glyphicon.glyphicon-share-alt
         Open
       %button.btn.btn-default{"data-target" => "#edit", "data-toggle" => "modal", type: "button"}
@@ -47,7 +49,7 @@
           %small All photos in this moment will be shared
         .row
           .col-xs-4.col-xs-offset-4
-            = image_tag 'moments/goal.png', class: 'moment-cover'
+            = image_tag 'moments/soccer_moment.jpg', class: 'moment-cover'
             %p.text-center Moments
         %h6 Through ...
         .row
@@ -84,7 +86,7 @@
         %h6 Delete This Moment
         .row
           .col-xs-4.col-xs-offset-4
-            = image_tag 'moments/goal.png', class: 'moment-cover'
+            = image_tag 'moments/soccer_moment.jpg', class: 'moment-cover'
             %p.text-center Moments
         %h3 Are you sure?
         %p This action cannot be undone
@@ -106,7 +108,7 @@
         %h6 Edit This Moment
         .row
           .col-xs-4.col-xs-offset-4
-            = image_tag 'moments/goal.png', class: 'moment-cover'
+            = image_tag 'moments/soccer_moment.jpg', class: 'moment-cover'
             %p.text-center Moments
         .row
           .col-xs-12

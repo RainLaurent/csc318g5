@@ -1,0 +1,10 @@
+%h2 Eric First Soccer Goal
+%hr
+
+- ['photos/soccer1.jpg', 'photos/soccer2.jpg', 'photos/soccer3.jpg', 'photos/soccer4.jpg'].each_slice(3) do |imgs|
+  .row
+    - imgs.each do |img|
+      .col-xs-4
+        = image_tag img, class: 'img-thumbnail img-selectable'
+
+= render 'toolbar'
