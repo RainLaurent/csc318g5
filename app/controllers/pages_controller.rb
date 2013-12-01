@@ -14,4 +14,8 @@ class PagesController < ApplicationController
   def search
     
   end
+
+  def tags
+
+  end
 end
