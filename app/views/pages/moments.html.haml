@@ -5,12 +5,15 @@
     New
 %hr
 
-- 2.times do
+- [['moments/pool.JPG', 'Melody First Time Swimming'], ['moments/hockey.JPG', 'At Home Hockey']].each_slice(3) do |imgs|
   .row
-    - 3.times do
+    - imgs.each do |img|
       .col-xs-4
-        = image_tag 'moments/goal.png', class: 'img-sig-selectable moment-cover'
-        %p.text-center Moments
+        = image_tag img[0], class: 'img-sig-selectable moment-cover'
+        %p.text-center
+          = img[1]
+
+
 
 
 // Bottom toolbar
