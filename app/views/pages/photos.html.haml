@@ -17,7 +17,7 @@
       %a.btn.btn-default{href: "edit"}
         %span.glyphicon.glyphicon-pencil
         Edit
-      %button.btn.btn-default{type: "button"}
+      %button.btn.btn-default{"data-target" => "#delete", "data-toggle" => "modal", type: "button"}
         %span.glyphicon.glyphicon-remove
         Delete
       %button.btn.btn-default{"data-target" => "#share", "data-toggle" => "modal", type: "button"}
@@ -129,3 +129,25 @@
       .modal-footer
         %button.btn.btn-default{"data-dismiss" => "modal", type: "button"} Close
         %button.btn.btn-primary{"data-dismiss" => "modal", type: "button"} Save
+
+// Delete Modal
+#delete.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "shareLabel", role: "dialog", tabindex: "-1"}
+  .modal-dialog
+    .modal-content
+      .modal-header
+        %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", type: "button"} ×
+        %h4#shareLabel.modal-title Mark As Moment
+      .modal-body
+        %h6 Delete These Photos
+        .row
+          .col-xs-4
+            = image_tag '1.jpg', class: 'img-thumbnail'
+          .col-xs-4
+            = image_tag '1.jpg', class: 'img-thumbnail'
+          .col-xs-4
+            = image_tag '1.jpg', class: 'img-thumbnail'
+        %h3 Are you sure?
+          
+      .modal-footer
+        %button.btn.btn-primary{"data-dismiss" => "modal", type: "button"} Yes
+        %button.btn.btn-default{"data-dismiss" => "modal", type: "button"} No
