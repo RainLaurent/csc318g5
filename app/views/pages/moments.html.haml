@@ -5,5 +5,111 @@
   .row
     - 3.times do
       .col-xs-4
-        = image_tag 'moments/goal.png', class: 'img-selectable moment-cover'
+        = image_tag 'moments/goal.png', class: 'img-sig-selectable moment-cover'
         %p.text-center Moments
+
+
+// Bottom toolbar
+.row.toolbar-row
+  .col-xs-8.col-xs-offset-2
+    .btn-group.toolbar-buttons
+      = link_to root_path, class: 'btn btn-default group1' do
+        %span.glyphicon.glyphicon-share-alt
+        Open
+      %button.btn.btn-default{"data-target" => "#edit", "data-toggle" => "modal", type: "button"}
+        %span.glyphicon.glyphicon-pencil
+        Edit
+      %button.btn.btn-default{"data-target" => "#delete", "data-toggle" => "modal", type: "button"}
+        %span.glyphicon.glyphicon-remove
+        Delete
+      %button.btn.btn-default{"data-target" => "#share", "data-toggle" => "modal", type: "button"}
+        %span.glyphicon.glyphicon-share
+        Share
+
+
+// Share Modal
+#share.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "shareLabel", role: "dialog", tabindex: "-1"}
+  .modal-dialog
+    .modal-content
+      .modal-header
+        %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", type: "button"} ×
+        %h4#shareLabel.modal-titleShare Moment
+      .modal-body
+        %h6
+          Share This Moment
+          %small All photos in this moment will be shared
+        .row
+          .col-xs-4.col-xs-offset-4
+            = image_tag 'moments/goal.png', class: 'moment-cover'
+            %p.text-center Moments
+        %h6 Through ...
+        .row
+          .col-xs-2
+            = image_tag 'facebook.png', class: 'social-icon img-selectable'
+            %p.text-center Facebook
+          .col-xs-2
+            = image_tag 'twitter.png', class: 'social-icon img-selectable'
+            .row
+              %p.text-center Twitter
+          .col-xs-2
+            = image_tag 'google_plus.png', class: 'social-icon img-selectable'
+            %p.text-center Google+
+          .col-xs-2
+            = image_tag 'email.png', class: 'social-icon img-selectable'
+            %p.text-center Email
+          .col-xs-2
+            %a{href: "#"}
+              = image_tag 'more.png', class: 'social-icon img-selectable'
+            %p.text-center More
+      .modal-footer
+        %button.btn.btn-default{"data-dismiss" => "modal", type: "button"} Close
+        %button.btn.btn-primary{"data-dismiss" => "modal", type: "button"} Share
+
+
+// Delete Modal
+#delete.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "shareLabel", role: "dialog", tabindex: "-1"}
+  .modal-dialog
+    .modal-content
+      .modal-header
+        %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", type: "button"} ×
+        %h4#shareLabel.modal-title Delete Moment
+      .modal-body
+        %h6 Delete This Moment
+        .row
+          .col-xs-4.col-xs-offset-4
+            = image_tag 'moments/goal.png', class: 'moment-cover'
+            %p.text-center Moments
+        %h3 Are you sure?
+        %p This action cannot be undone
+        %p The photo in the moment will not be removed, they will still be viewable in all photos
+        
+          
+      .modal-footer
+        %button.btn.btn-danger{"data-dismiss" => "modal", type: "button"} Yes
+        %button.btn.btn-default{"data-dismiss" => "modal", type: "button"} No
+
+// Tag Modal
+#edit.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "shareLabel", role: "dialog", tabindex: "-1"}
+  .modal-dialog
+    .modal-content
+      .modal-header
+        %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", type: "button"} ×
+        %h4#shareLabel.modal-title Edit Moment
+      .modal-body
+        %h6 Edit This Moment
+        .row
+          .col-xs-4.col-xs-offset-4
+            = image_tag 'moments/goal.png', class: 'moment-cover'
+            %p.text-center Moments
+        .row
+          .col-xs-12
+            %form{"role" => "form"}
+              %label Name
+              %input{"input" => "text", "class" => "form-control"}
+
+              %label Description
+              %textarea.form-control{"rows" => 3}
+          
+      .modal-footer
+        %button.btn.btn-default{"data-dismiss" => "modal", type: "button"} Close
+        %button.btn.btn-primary{"data-dismiss" => "modal", type: "button"} Save

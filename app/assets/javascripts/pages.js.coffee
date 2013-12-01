@@ -18,9 +18,19 @@ init = ->
       $(".toolbar-row").hide()
 
   $(".img-sig-selectable").on "click", (e) ->
-    $(".img-selected").removeClass "img-selected"
-    $(this).toggleClass "img-selected"
+    if $(this).hasClass("img-selected")
+      $(this).removeClass("img-selected")
+    else
+      $(".img-selected").removeClass "img-selected"
+      $(this).addClass("img-selected")
+
+    selected = $(".img-selected")   
+    if selected.length > 0
+      $(".toolbar-row").show()
+    else
+      $(".toolbar-row").hide()
 
   $(".group1").colorbox({rel: "group1"})
+
 $(document).ready(init)
 $(document).on('page:load', init)

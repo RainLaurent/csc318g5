@@ -101,7 +101,7 @@
         %button.btn.btn-default{"data-dismiss" => "modal", type: "button"} Close
         %button.btn.btn-primary{"data-dismiss" => "modal", type: "button"} Save
 
-// Tag Modal
+// Moment Modal
 #moment.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "shareLabel", role: "dialog", tabindex: "-1"}
   .modal-dialog
     .modal-content
@@ -139,7 +139,7 @@
     .modal-content
       .modal-header
         %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", type: "button"} ×
-        %h4#shareLabel.modal-title Mark As Moment
+        %h4#shareLabel.modal-title Delete Photos
       .modal-body
         %h6 Delete These Photos
         .row
@@ -150,7 +150,8 @@
           .col-xs-4
             = image_tag '1.jpg', class: 'img-thumbnail'
         %h3 Are you sure?
+        %p This action cannot be undone
           
       .modal-footer
-        %button.btn.btn-primary{"data-dismiss" => "modal", type: "button"} Yes
+        %button.btn.btn-danger{"data-dismiss" => "modal", type: "button"} Yes
         %button.btn.btn-default{"data-dismiss" => "modal", type: "button"} No
