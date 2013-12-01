@@ -18,4 +18,8 @@ class PagesController < ApplicationController
   def tags
 
   end
+
+  def click_tag
+    
+  end
 end
