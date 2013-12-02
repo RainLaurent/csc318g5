@@ -26,4 +26,8 @@ class PagesController < ApplicationController
   def moment_open
     
   end
+
+  def photos_flash
+    
+  end
 end

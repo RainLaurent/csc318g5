@@ -62,9 +62,16 @@
             %a{href: "#"}
               = image_tag 'more.png', class: 'social-icon img-selectable'
             %p.text-center More
+        .row
+          .col-xs-12
+            %form{"role" => "form"}
+              .form-group
+                %label Comment
+                %textarea.form-control{"rows" => 3}
+
       .modal-footer
         %button.btn.btn-default{"data-dismiss" => "modal", type: "button"} Close
-        %button.btn.btn-primary{"data-dismiss" => "modal", type: "button"} Share
+        %a.btn.btn-primary{href: "photos_flash"} Share
 
 
 // Tag Modal
@@ -90,7 +97,7 @@
               %input{"input" => "text", "class" => "form-control", "placeholder" => "Tags seperated by comma"}
       .modal-footer
         %button.btn.btn-default{"data-dismiss" => "modal", type: "button"} Close
-        %button.btn.btn-primary{"data-dismiss" => "modal", type: "button"} Save
+        %a.btn.btn-primary{href: "photos_flash"} Save
 
 // Moment Modal
 #moment.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "shareLabel", role: "dialog", tabindex: "-1"}
@@ -115,14 +122,14 @@
             %p.text-center Eric First Soccer Goal
           .col-xs-4
             = image_tag 'moments/pool_moment.jpg', class: 'img-sig-selectable moment-cover'
-            %p.text-center xxx
+            %p.text-center Melody Swim
           .col-xs-4
             = image_tag 'moments/hokey_moment.JPG', class: 'img-sig-selectable moment-cover'
-            %p.text-center xxx
+            %p.text-center In Home Hockey
           
       .modal-footer
         %button.btn.btn-default{"data-dismiss" => "modal", type: "button"} Close
-        %button.btn.btn-primary{"data-dismiss" => "modal", type: "button"} Save
+        %a.btn.btn-primary{href: "photos_flash"} Save
 
 // Delete Modal
 #delete.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "shareLabel", role: "dialog", tabindex: "-1"}
@@ -144,5 +151,5 @@
         %p This action cannot be undone
           
       .modal-footer
-        %button.btn.btn-danger{"data-dismiss" => "modal", type: "button"} Yes
+        %a.btn.btn-primary{href: "photos_flash"} Save
         %button.btn.btn-default{"data-dismiss" => "modal", type: "button"} No

@@ -15,6 +15,8 @@
       .form-group
         - if request.original_url.include?('moments')
           %input.form-control{placeholder: "Search Moments", type: "text"}/
+        - elsif request.original_url.include?('tags')
+          %input.form-control{placeholder: "Search Tags", type: "text"}/
         - else
           %input.form-control{placeholder: "Search All Photos", type: "text"}/
 
@@ -42,4 +44,4 @@
             %li
               %a{href: "#"} Location
             %li
-              %a{href: "#"} People
+              %a{href: "#"} Tags
